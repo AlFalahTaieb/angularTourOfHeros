@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Chdoula Angular Application';
+  first = 5;
+  second = 6 ;
 }
