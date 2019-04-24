@@ -1,0 +1,11 @@
+<div *ngIf="distro">
+
+  <h2> {{ distro.name }} Details; </h2>
+  <div><span>id: </span> {{ distro.id }}</div>
+  <div>
+    <label> name :
+      <input [(ngModel)]='distro.name' placeholder="name" />
+    </label>
+  </div>
+
+</div>
