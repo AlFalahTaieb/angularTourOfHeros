@@ -1,11 +1,23 @@
 <div style="text-align:center">
+  <div *ngIf="selectedDistro">
+    <h2> {{selectedDistro.name | uppercase }} Detail </h2>
+    <div><span>id: </span> {{selectedDistro.id}}
+  </div>
+<div>
+  <label>name:
+    <input [(ngModel)]="selectedDistro.name" placeholder="name" />
+  </label>
+</div>
 
-<h2> {{distro.name}} Detail </h2>
-<div> <span>id: </span> {{distro.id}} </div>
-<div> <label>Name:
-  <input [(ngModel)]="distro.name" placeholder="name"/>
 
-</label> </div>
-
+</div>
+<h3>My Distros</h3>
+<ul class='distros'>
+  <li *ngFor="let distro of distros" 
+  [class.selected]="hero === selectedHero"
+  (click)="onSelect(distro)">
+    <span class="badge">{{ distro.id }}</span> {{distro.name}}
+  </li>
+</ul>
 
 </div>
