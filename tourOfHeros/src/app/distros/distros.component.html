@@ -2,7 +2,10 @@
 
 <h2> {{distro.name}} Detail </h2>
 <div> <span>id: </span> {{distro.id}} </div>
-<div> <span>name: </span> {{distro.name}} </div>
+<div> <label>Name:
+  <input [(ngModel)]="distro.name" placeholder="name"/>
+
+</label> </div>
 
 
 </div>
