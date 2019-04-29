@@ -9,7 +9,6 @@ import { DistroService } from '../distro.service';
 })
 export class DistrosComponent implements OnInit {
 
-
   selectedDistro: Distro;
   onSelect(distro: Distro) {
     console.log(this.selectedDistro = distro);
